@@ -18,6 +18,8 @@ const MyForm = ({handleAddList}) => {
             }])
         }
         handleAddList(list)
+
+        document.querySelector("input").value = ''
     }
 
     const handleSubmit = (event) => {
@@ -40,7 +42,7 @@ const MyForm = ({handleAddList}) => {
                     <Form.Control required aria-describedby='item' aria-label='item' onChange={(e) => setValue(e.target.value)} />
                     <Form.Control.Feedback>Every thing is good</Form.Control.Feedback>
                 </InputGroup>
-                <Button variant='warning' className='mx-auto my-3 d-block ' onClick={addItem}>Add</Button>
+                <Button variant='warning' className='mx-auto my-3 d-block w-25' onClick={addItem}>Add</Button>
             </Form>
         </div>
     )
